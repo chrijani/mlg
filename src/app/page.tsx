@@ -1,215 +1,370 @@
-import Image from "next/image";
+import ScrollAnimations from "./ScrollAnimations";
+import MobileNav from "./MobileNav";
+
+function ArrowIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
     <>
+      <ScrollAnimations />
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-center">
-            <Image
-              src="/logo-horizontal-black.png"
-              alt="Mariotti Law Group"
-              width={220}
-              height={50}
-              priority
-            />
+      <nav id="navbar">
+        <div className="nav-inner">
+          <a href="#" className="nav-logo">
+            <div className="nav-logo-mark">
+              <svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="21" cy="21" r="20" fill="none" stroke="#141414" strokeWidth="1.2" />
+                <text x="21" y="27" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="22" fontWeight="400" fill="#141414">M</text>
+              </svg>
+            </div>
+            <div className="nav-logo-text">
+              Mariotti<span>Law Group</span>
+            </div>
           </a>
-          <div className="hidden md:flex items-center gap-8 text-sm tracking-wide">
-            <a href="#about" className="text-gray-600 hover:text-black transition-colors">
-              About
-            </a>
-            <a href="#services" className="text-gray-600 hover:text-black transition-colors">
-              Practice Areas
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-black transition-colors">
-              Contact
-            </a>
-          </div>
+          <ul className="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#practices">Services</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#contact" className="nav-cta">Contact</a></li>
+          </ul>
+          <MobileNav />
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-[#1a1a1a] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1a1a1a]" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="mb-10">
-            <Image
-              src="/logo-horizontal-white.png"
-              alt="Mariotti Law Group"
-              width={400}
-              height={90}
-              priority
-              className="mx-auto"
-            />
+      {/* Hero */}
+      <section className="hero" id="home">
+        <div className="hero-content">
+          <div className="hero-left">
+            <p className="text-sm-label text-gray fade-in">Est. 1965</p>
+            <h1 className="fade-in stagger-1">
+              Protecting what you&apos;ve built.<br />Planning for what&apos;s next.
+            </h1>
+            <p className="fade-in stagger-2">
+              Estate planning. Mortgage enforcement. Commercial real estate. Corporate transactions.
+              Mariotti Law Group has advised Ontario families, lenders, and businesses for six decades.
+              One firm. Five practices. The counsel you need before you need it.
+            </p>
+            <a href="#contact" className="btn fade-in stagger-3">Schedule a Consultation</a>
           </div>
-          <div className="w-16 h-px bg-[#c4a97d] mx-auto mb-8" />
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-4">
-            Corporate · Real Estate · Wills &amp; Estates
-          </p>
-          <p className="text-base text-gray-400 max-w-xl mx-auto leading-relaxed mb-10">
-            Providing trusted, personalized legal counsel to individuals and businesses across Ontario.
-          </p>
-          <a
-            href="#contact"
-            className="inline-block border border-[#c4a97d] text-[#c4a97d] px-8 py-3 text-sm tracking-widest uppercase hover:bg-[#c4a97d] hover:text-white transition-all duration-300"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-sm tracking-widest text-[#8b7355] uppercase mb-4">About the Firm</p>
-              <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6 leading-tight">
-                Dedicated Legal Excellence
-              </h2>
-              <div className="w-12 h-px bg-[#c4a97d] mb-6" />
-              <p className="text-gray-600 leading-relaxed mb-4">
-                At Mariotti Law Group, we believe in building lasting relationships with our clients through
-                integrity, diligence, and a deep understanding of their unique legal needs.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Our team brings a meticulous, client-focused approach to every matter &mdash; whether you
-                are purchasing your first home, planning your estate, or structuring a business transaction.
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/stamp-black.png"
-                alt="Mariotti Law Group Seal"
-                width={300}
-                height={300}
-                className="opacity-80"
-              />
+          <div className="hero-right">
+            <div className="hero-heritage fade-in stagger-4">
+              <div className="year">1965</div>
+              <div className="label">Year Established</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Practice Areas */}
-      <section id="services" className="py-24 bg-[#f7f5f2]">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-sm tracking-widest text-[#8b7355] uppercase mb-4">What We Do</p>
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6">Practice Areas</h2>
-            <div className="w-12 h-px bg-[#c4a97d] mx-auto" />
+      {/* Divider */}
+      <div className="container">
+        <div className="divider">
+          <div className="divider-line"></div>
+          <div className="divider-dot"></div>
+          <div className="divider-line"></div>
+        </div>
+      </div>
+
+      {/* Core Practices */}
+      <section className="practices" id="practices">
+        <div className="container">
+          <div className="practices-header fade-in">
+            <span className="text-sm-label">Core Practices</span>
+            <h2>What We Do</h2>
+            <p>
+              Every practice at our firm exists to solve a specific problem. We list them because they
+              are what we do, every day, for clients who depend on getting it right.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <PracticeCard
-              title="Corporate Law"
-              description="From incorporations and shareholder agreements to commercial transactions, we help businesses navigate complex legal landscapes with confidence."
-              icon={
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" />
-                </svg>
-              }
-            />
-            <PracticeCard
-              title="Real Estate"
-              description="We guide clients through every stage of real estate transactions — residential and commercial purchases, sales, refinances, and title matters."
-              icon={
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-              }
-            />
-            <PracticeCard
-              title="Wills & Estates"
-              description="Protect your family and legacy with comprehensive estate planning, including wills, powers of attorney, and estate administration."
-              icon={
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21" />
-                </svg>
-              }
-            />
+
+          <div className="practices-grid">
+            <div className="practice-card fade-in stagger-1">
+              <div className="number">01</div>
+              <h3>Wills &amp; Estate Planning</h3>
+              <p>
+                Your will is not a form to fill out. It is the document that determines who controls
+                your assets, who raises your children, and whether your family spends six months in
+                court or six minutes with a lawyer. We build estate plans that account for blended
+                families, business interests, tax exposure, and the complications that only surface
+                when it is too late to fix them.
+              </p>
+              <a href="#estate-planning" className="card-link">
+                Learn more <ArrowIcon />
+              </a>
+            </div>
+
+            <div className="practice-card fade-in stagger-2">
+              <div className="number">02</div>
+              <h3>Estate Administration</h3>
+              <p>
+                When someone dies, the paperwork starts. Court applications. Tax clearances. Asset
+                transfers. Creditor claims. Beneficiary disputes. Estate administration is detail work
+                under emotional pressure, and the mistakes people make in the first 30 days can take
+                years to undo. We guide estate trustees through every stage, from the Certificate of
+                Appointment to the final distribution.
+              </p>
+              <a href="#" className="card-link">
+                Learn more <ArrowIcon />
+              </a>
+            </div>
+
+            <div className="practice-card fade-in stagger-3">
+              <div className="number">03</div>
+              <h3>Mortgage Enforcement &amp; Private Lending</h3>
+              <p>
+                Private lenders succeed when their documentation is precise and their enforcement
+                remedies are clear. We draft mortgage documents, promissory notes, and guarantees that
+                anticipate default. When borrowers stop paying, we move to power-of-sale proceedings,
+                receivership applications, and court-ordered sales with the efficiency your portfolio
+                demands.
+              </p>
+              <a href="#" className="card-link">
+                Learn more <ArrowIcon />
+              </a>
+            </div>
+
+            <div className="practice-card fade-in stagger-1">
+              <div className="number">04</div>
+              <h3>Real Estate — Commercial &amp; Development</h3>
+              <p>
+                Acquisitions. Development agreements. Construction financing. Commercial leases.
+                Severances. Every commercial real estate transaction has a timeline, and every delay
+                has a cost. We work at the speed of the deal without cutting corners on the details
+                that protect your position.
+              </p>
+              <a href="#" className="card-link">
+                Learn more <ArrowIcon />
+              </a>
+            </div>
+
+            <div className="practice-card fade-in stagger-2">
+              <div className="number">05</div>
+              <h3>Corporate &amp; Commercial</h3>
+              <p>
+                Business purchases and sales. Shareholder agreements. Partnership structures.
+                Commercial contracts. When relationships are good, everyone agrees on a handshake.
+                When they change, you need the agreement you signed three years ago to say exactly
+                what it needs to say. We write those agreements.
+              </p>
+              <a href="#" className="card-link">
+                Learn more <ArrowIcon />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-sm tracking-widest text-[#8b7355] uppercase mb-4">Contact Us</p>
-          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6">
-            Let&apos;s Discuss Your Legal Needs
+      {/* Heritage Strip */}
+      <div className="heritage">
+        <div className="container">
+          <div className="heritage-inner">
+            <div className="heritage-stat fade-in stagger-1">
+              <div className="number">1965</div>
+              <div className="label">Year Founded</div>
+            </div>
+            <div className="heritage-stat fade-in stagger-2">
+              <div className="number">5</div>
+              <div className="label">Core Practices</div>
+            </div>
+            <div className="heritage-stat fade-in stagger-3">
+              <div className="number">60</div>
+              <div className="label">Years of Practice</div>
+            </div>
+            <div className="heritage-stat fade-in stagger-4">
+              <div className="number">18</div>
+              <div className="label">Professionals</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Philosophy */}
+      <section className="philosophy" id="about">
+        <div className="container">
+          <div className="philosophy-grid">
+            <div className="philosophy-left fade-in">
+              <span className="text-sm-label">Our Firm</span>
+              <h2>A firm built on substance, not slogans.</h2>
+              <blockquote>
+                We would rather show you what we do than tell you what we are.
+              </blockquote>
+            </div>
+            <div className="philosophy-right fade-in stagger-2">
+              <p>
+                Mariotti Law Group advises Ontario families, private lenders, developers, and
+                businesses across five core practice areas. Estate planning and administration.
+                Mortgage enforcement and private lending. Commercial and development real estate.
+                Corporate and commercial transactions. Each practice exists because clients need it,
+                and each is staffed by people who work in that area every day.
+              </p>
+              <p>
+                What has remained constant since the firm&apos;s founding in 1965 is the approach:
+                understand the client&apos;s situation completely before proposing a solution.
+                Anticipate problems before they arrive. Explain the options in plain language.
+                Execute with precision.
+              </p>
+              <p>
+                We do not try to be all things to all people. Clients who need careful,
+                forward-looking legal counsel for their family, their investments, or their business
+                are the clients we serve well.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className="approach" id="approach">
+        <div className="container">
+          <div className="approach-header fade-in">
+            <span className="text-sm-label">How We Work</span>
+            <h2>Counsel, not just compliance.</h2>
+          </div>
+
+          <div className="approach-items">
+            <div className="approach-item fade-in stagger-1">
+              <h3>We listen before we advise.</h3>
+              <p>
+                Every engagement starts with understanding. Your situation, your concerns, the
+                outcomes that matter to you. We ask the questions that surface issues you may not
+                have considered, and we do not propose solutions until we understand the full picture.
+              </p>
+            </div>
+            <div className="approach-item fade-in stagger-2">
+              <h3>We think three moves ahead.</h3>
+              <p>
+                The value of a good lawyer is not in the document they draft today. It is in the
+                problem they prevent next year. We structure agreements, estate plans, and
+                transactions with an eye toward what could change, what could go wrong, and how your
+                interests stay protected when it does.
+              </p>
+            </div>
+            <div className="approach-item fade-in stagger-3">
+              <h3>We speak plainly.</h3>
+              <p>
+                Legal complexity is not an excuse for unclear communication. We explain the law in
+                terms you can act on. If you leave a meeting unsure about what was decided or what
+                happens next, we have not done our job.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Estate Planning Detail */}
+      <section className="detail-section" id="estate-planning">
+        <div className="container">
+          <div className="detail-content">
+            <div className="detail-sidebar fade-in">
+              <span className="text-sm-label">Wills &amp; Estate Planning</span>
+              <h2>The plan that protects your family when you cannot.</h2>
+            </div>
+            <div className="detail-main fade-in stagger-2">
+              <p>
+                You have spent decades building something. A home. A business. A portfolio. A family.
+                And at some point, the question becomes unavoidable: what happens to all of it if
+                something happens to you?
+              </p>
+              <p>
+                Without a current, properly drafted estate plan, the answer is that the government
+                decides. Ontario&apos;s Succession Law Reform Act provides a default distribution
+                scheme that has nothing to do with your wishes, your family dynamics, or the tax
+                consequences. A will overrides those defaults. A power of attorney prevents a
+                court-supervised process that can cost your family $20,000 or more and take six
+                months to resolve.
+              </p>
+              <p>
+                We prepare wills, powers of attorney for property, and powers of attorney for
+                personal care. For clients with more complex situations, we structure trusts, plan
+                for tax-efficient asset transfers, address business succession, and coordinate with
+                accountants and financial advisors to build plans that work across disciplines.
+              </p>
+              <p>
+                Every plan begins with a conversation. We need to understand your family, your
+                assets, your concerns, and the outcomes that matter most to you. Only then can we
+                recommend the right instruments and draft documents that do what you need them to do.
+              </p>
+              <div style={{ marginTop: "2rem" }}>
+                <a href="#contact" className="btn">Schedule a Consultation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section" id="contact">
+        <div className="container-narrow" style={{ textAlign: "center" }}>
+          <span className="text-sm-label text-gray fade-in" style={{ display: "block", marginBottom: "1rem" }}>
+            Start Here
+          </span>
+          <h2 className="fade-in stagger-1">
+            The best time to talk to a lawyer is before the problem becomes urgent.
           </h2>
-          <div className="w-12 h-px bg-[#c4a97d] mx-auto mb-8" />
-          <p className="text-gray-600 leading-relaxed mb-10 max-w-xl mx-auto">
-            Reach out today to schedule a consultation. We are here to help you find clarity and confidence in your legal matters.
+          <p className="fade-in stagger-2">
+            Whether you need to update an estate plan, structure a transaction, or enforce a
+            mortgage, a 30-minute conversation is the place to start. Tell us what you are facing,
+            and we will tell you how we can help.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-            <a
-              href="mailto:info@mariottilaw.ca"
-              className="flex items-center gap-3 text-gray-700 hover:text-[#8b7355] transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-              </svg>
-              info@mariottilaw.ca
-            </a>
-            <a
-              href="tel:+1234567890"
-              className="flex items-center gap-3 text-gray-700 hover:text-[#8b7355] transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-              </svg>
-              (905) 555-0100
-            </a>
+          <div className="cta-buttons fade-in stagger-3">
+            <a href="tel:+1XXXXXXXXXX" className="btn">Call Us</a>
+            <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
-          <a
-            href="mailto:info@mariottilaw.ca"
-            className="inline-block bg-[#1a1a1a] text-white px-8 py-3 text-sm tracking-widest uppercase hover:bg-[#333] transition-colors duration-300"
-          >
-            Book a Consultation
-          </a>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1a1a1a] text-gray-400 py-12">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <Image
-              src="/logo-horizontal-white.png"
-              alt="Mariotti Law Group"
-              width={180}
-              height={40}
-            />
-            <div className="flex gap-8 text-sm">
-              <a href="#about" className="hover:text-white transition-colors">About</a>
-              <a href="#services" className="hover:text-white transition-colors">Practice Areas</a>
-              <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+      <footer>
+        <div className="container">
+          <div className="footer-grid">
+            <div className="footer-brand">
+              <div className="nav-logo-text" style={{ color: "var(--timberwolf)" }}>
+                Mariotti<span style={{ color: "var(--dim-gray)" }}>Law Group</span>
+              </div>
+              <p>Advising Ontario families, lenders, and businesses since 1965.</p>
+            </div>
+            <div className="footer-col">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#practices">Wills &amp; Estate Planning</a></li>
+                <li><a href="#practices">Estate Administration</a></li>
+                <li><a href="#practices">Mortgage Enforcement</a></li>
+                <li><a href="#practices">Commercial Real Estate</a></li>
+                <li><a href="#practices">Corporate &amp; Commercial</a></li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <h4>Firm</h4>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <h4>Connect</h4>
+              <ul>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Mariotti Law Group. All rights reserved.
+          <div className="footer-bottom">
+            <p>&copy; 2026 Mariotti Law Group. All rights reserved.</p>
+            <div className="footer-legal">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Use</a>
+              <a href="#">Accessibility</a>
+            </div>
           </div>
         </div>
       </footer>
     </>
-  );
-}
-
-function PracticeCard({
-  title,
-  description,
-  icon,
-}: {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}) {
-  return (
-    <div className="bg-white p-8 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-      <div className="text-[#8b7355] mb-5">{icon}</div>
-      <h3 className="text-xl font-medium text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed text-sm">{description}</p>
-    </div>
   );
 }

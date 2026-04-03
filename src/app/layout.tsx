@@ -2,21 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mariotti Law Group | Corporate · Real Estate · Wills & Estates",
+  title: "Mariotti Law Group | Estate Planning · Real Estate · Corporate Law",
   description:
-    "Mariotti Law Group provides trusted legal services in Corporate Law, Real Estate, and Wills & Estates across Ontario, Canada.",
+    "Mariotti Law Group has advised Ontario families, lenders, and businesses since 1965. Estate planning, mortgage enforcement, commercial real estate, and corporate transactions.",
   keywords: [
     "law firm",
+    "estate planning",
+    "wills",
+    "mortgage enforcement",
+    "commercial real estate",
     "corporate law",
-    "real estate lawyer",
-    "wills and estates",
     "Ontario lawyer",
     "Mariotti Law Group",
   ],
   openGraph: {
     title: "Mariotti Law Group",
     description:
-      "Trusted legal services in Corporate Law, Real Estate, and Wills & Estates.",
+      "Protecting what you've built. Planning for what's next. Ontario's trusted law firm since 1965.",
     url: "https://mariottilaw.ca",
     siteName: "Mariotti Law Group",
     type: "website",
@@ -29,8 +31,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
