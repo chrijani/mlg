@@ -411,6 +411,7 @@ nav.scrolled {
 
 .hero-left .btn {
   align-self: flex-start;
+  width: fit-content;
 }
 
 .hero-image-wrap {

@@ -129,19 +129,19 @@ export default function ContactPage() {
               <span className="contact-practice-number">02</span>
               <span className="contact-practice-name">Estate Administration</span>
             </a>
-            <a href="#" className="contact-practice-card fade-in s3">
+            <a href="/mortgage-enforcement" className="contact-practice-card fade-in s3">
               <span className="contact-practice-number">03</span>
               <span className="contact-practice-name">Mortgage Enforcement</span>
             </a>
-            <a href="#" className="contact-practice-card fade-in s4">
+            <a href="/private-lending" className="contact-practice-card fade-in s4">
               <span className="contact-practice-number">04</span>
               <span className="contact-practice-name">Private Lending</span>
             </a>
-            <a href="#" className="contact-practice-card fade-in s5">
+            <a href="/real-estate-transactions" className="contact-practice-card fade-in s5">
               <span className="contact-practice-number">05</span>
               <span className="contact-practice-name">Real Estate Transactions</span>
             </a>
-            <a href="#" className="contact-practice-card fade-in s6">
+            <a href="/real-estate-development" className="contact-practice-card fade-in s6">
               <span className="contact-practice-number">06</span>
               <span className="contact-practice-name">Real Estate Development</span>
             </a>

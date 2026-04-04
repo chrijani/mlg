@@ -159,7 +159,7 @@ export default function Home() {
                 between here and there has a cost. We handle residential and commercial closings with
                 the precision the deal demands.
               </p>
-              <a href="#" className="card-link">
+              <a href="/real-estate-transactions" className="card-link">
                 Learn more <ArrowIcon />
               </a>
             </div>
