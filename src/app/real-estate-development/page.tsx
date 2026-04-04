@@ -4,16 +4,26 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Real Estate Development — Mariotti Law Group",
+  title: "Real Estate Development Law | Mariotti Law Group | Ontario",
   description:
-    "Land acquisition, planning approvals, subdivision agreements, condominium registration, and construction financing for Ontario developers. Mariotti Law Group handles the legal work across every stage.",
+    "Legal counsel for Ontario developers from land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
+  alternates: { canonical: "https://mariottilaw.ca/real-estate-development" },
   openGraph: {
-    title: "Real Estate Development — Mariotti Law Group",
+    title: "Real Estate Development Law | Mariotti Law Group | Ontario",
     description:
-      "Between the land you own and the project you planned to build on it sits a process that touches half a dozen statutes, multiple levels of government, and a timeline that no proforma accurately predicts.",
+      "Legal counsel for Ontario developers from land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
     url: "https://mariottilaw.ca/real-estate-development",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Real Estate Development Law | Mariotti Law Group | Ontario",
+    description:
+      "Legal counsel for Ontario developers from land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
+    images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
 
@@ -24,7 +34,7 @@ export default function RealEstateDevelopmentPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero" data-number="06">
+      <section className="page-hero" data-number="06" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
@@ -220,7 +230,7 @@ export default function RealEstateDevelopmentPage() {
             The legal work that prevents delays costs a fraction of the delays themselves. Whether you are assembling land, waiting on approvals, or managing construction, we work at the pace the project demands.
           </p>
           <div className="cta-buttons fade-in s3">
-            <a href="tel:+1XXXXXXXXXX" className="btn">Call Us</a>
+            <a href="tel:+15199973775" className="btn">Call Us</a>
             <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>

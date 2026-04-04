@@ -25,7 +25,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero page-hero-short">
+      <section className="page-hero page-hero-short" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
@@ -61,7 +61,7 @@ export default function ContactPage() {
               <div className="contact-block">
                 <h3>Telephone</h3>
                 <p>
-                  <a href="tel:+15199771965" className="contact-link">(519) 977-1965</a>
+                  <a href="tel:+15199973775" className="contact-link">519-997-3775</a>
                 </p>
               </div>
 

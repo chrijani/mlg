@@ -1,13 +1,27 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer>
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <div className="nav-logo-text" style={{ color: "var(--timberwolf)" }}>
-              Mariotti<span style={{ color: "var(--dim-gray)" }}>Law Group</span>
+            <Image
+              src="/logo-white-vertical.png"
+              alt="Mariotti Law Group"
+              width={160}
+              height={80}
+              style={{ maxHeight: "70px", width: "auto", height: "auto" }}
+            />
+            <div className="footer-address">
+              625 Erie Street East<br />
+              Windsor, Ontario N9A 3Y1
             </div>
-            <p>Advising Ontario families, lenders, and businesses since 1965. Founded by Anthony &ldquo;Tony&rdquo; Mariotti.</p>
+            <div className="footer-contact-info">
+              <a href="tel:+15199973775">519-997-3775</a>
+              <span>226-620-1943 fax</span>
+              <a href="mailto:info@mariottilaw.ca">info@mariottilaw.ca</a>
+            </div>
           </div>
           <div className="footer-col">
             <h4>Services</h4>
@@ -37,6 +51,11 @@ export default function Footer() {
               <li><a href="#">SimplyClose Law</a></li>
             </ul>
           </div>
+        </div>
+        <div className="footer-divider">
+          <div className="footer-divider-line"></div>
+          <div className="footer-divider-diamond"></div>
+          <div className="footer-divider-line"></div>
         </div>
         <div className="footer-bottom">
           <p>&copy; 2026 Mariotti Law Group. All rights reserved.</p>

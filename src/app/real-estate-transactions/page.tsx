@@ -4,16 +4,26 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Real Estate Transactions — Mariotti Law Group",
+  title: "Real Estate Transactions | Commercial & Residential | Mariotti Law Group | Ontario",
   description:
-    "Residential and commercial real estate closings across Ontario. Purchases, sales, refinances, commercial acquisitions, and leasing handled from agreement through registration.",
+    "Purchases, sales, refinances, commercial acquisitions, investment properties, and leasing across Ontario. Title search, due diligence, HST structuring, Planning Act compliance.",
+  alternates: { canonical: "https://mariottilaw.ca/real-estate-transactions" },
   openGraph: {
-    title: "Real Estate Transactions — Mariotti Law Group",
+    title: "Real Estate Transactions | Commercial & Residential | Mariotti Law Group | Ontario",
     description:
-      "What you don't find before closing, you own after it. We handle real estate transactions from the agreement through registration.",
+      "Purchases, sales, refinances, commercial acquisitions, investment properties, and leasing across Ontario. Title search, due diligence, HST structuring, Planning Act compliance.",
     url: "https://mariottilaw.ca/real-estate-transactions",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Real Estate Transactions | Commercial & Residential | Mariotti Law Group | Ontario",
+    description:
+      "Purchases, sales, refinances, commercial acquisitions, investment properties, and leasing across Ontario. Title search, due diligence, HST structuring, Planning Act compliance.",
+    images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
 
@@ -24,7 +34,7 @@ export default function RealEstateTransactionsPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero" data-number="05">
+      <section className="page-hero" data-number="05" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
@@ -220,7 +230,7 @@ export default function RealEstateTransactionsPage() {
             Whether you are buying a first home or acquiring a commercial portfolio, the process starts with a title search and ends with a registration. We handle everything in between.
           </p>
           <div className="cta-buttons fade-in s3">
-            <a href="tel:+1XXXXXXXXXX" className="btn">Call Us</a>
+            <a href="tel:+15199973775" className="btn">Call Us</a>
             <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>
