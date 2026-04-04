@@ -413,6 +413,20 @@ nav.scrolled {
   padding: clamp(3rem, 5vw, 5rem);
 }
 
+.hero-right-image {
+  padding: 0;
+  align-items: stretch;
+  justify-content: stretch;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .hero-heritage-composition {
   text-align: left;
 }

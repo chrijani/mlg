@@ -1,6 +1,7 @@
 import ScrollAnimations from "./ScrollAnimations";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Image from "next/image";
 
 function ArrowIcon() {
   return (
@@ -33,16 +34,15 @@ export default function Home() {
             </p>
             <a href="#contact" className="btn fade-in stagger-3">Schedule a Consultation</a>
           </div>
-          <div className="hero-right">
-            <div className="hero-heritage-composition fade-in stagger-4">
-              <div className="heritage-founded">Founded 1965</div>
-              <div className="heritage-founder">by Anthony &lsquo;Tony&rsquo; Mariotti</div>
-              <div className="heritage-rule" />
-              <div className="heritage-tagline">
-                Five lawyers. Seven practices.<br />
-                <span className="heritage-tagline-bold">One standard.</span>
-              </div>
-            </div>
+          <div className="hero-right hero-right-image">
+            <Image
+              src="/homepage_hero_image.png"
+              alt="Mariotti Law Group office"
+              width={800}
+              height={1000}
+              priority
+              className="hero-image fade-in stagger-4"
+            />
           </div>
         </div>
       </section>
