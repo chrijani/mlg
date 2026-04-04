@@ -5,24 +5,24 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Our Lawyers | Mariotti Law Group | Ontario",
+  title: "Our Lawyers | Mariotti Law Group | Windsor Ontario",
   description:
-    "Five lawyers with defined areas of practice. Estate planning, mortgage enforcement, real estate, private lending, corporate law. Mariotti Law Group, Windsor, Ontario.",
+    "Five lawyers with defined practice areas at Mariotti Law Group, Windsor Ontario. Estate planning, mortgage enforcement, real estate, private lending, corporate law.",
   alternates: { canonical: "https://mariottilaw.ca/team" },
   openGraph: {
-    title: "Our Lawyers | Mariotti Law Group | Ontario",
+    title: "Our Lawyers | Mariotti Law Group | Windsor Ontario",
     description:
-      "Five lawyers with defined areas of practice. Estate planning, mortgage enforcement, real estate, private lending, corporate law. Mariotti Law Group, Windsor, Ontario.",
+      "Five lawyers with defined practice areas at Mariotti Law Group, Windsor Ontario. Estate planning, mortgage enforcement, real estate, private lending, corporate law.",
     url: "https://mariottilaw.ca/team",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Lawyers | Mariotti Law Group | Ontario",
-    description: "Five lawyers with defined areas of practice. Mariotti Law Group, Windsor, Ontario.",
+    title: "Our Lawyers | Mariotti Law Group | Windsor Ontario",
+    description: "Five lawyers with defined practice areas at Mariotti Law Group, Windsor Ontario.",
     images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
@@ -69,9 +69,19 @@ function ArrowSVG() {
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+    { "@type": "ListItem", position: 2, name: "Team", item: "https://mariottilaw.ca/team" },
+  ],
+};
+
 export default function TeamPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 

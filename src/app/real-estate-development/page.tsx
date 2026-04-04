@@ -4,32 +4,62 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Real Estate Development Law | Mariotti Law Group | Ontario",
+  title: "Development Lawyer Ontario | Planning Act | Mariotti",
   description:
-    "Legal counsel for Ontario developers from land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
+    "Ontario development lawyer. Land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
   alternates: { canonical: "https://mariottilaw.ca/real-estate-development" },
   openGraph: {
-    title: "Real Estate Development Law | Mariotti Law Group | Ontario",
+    title: "Development Lawyer Ontario | Planning Act | Mariotti",
     description:
-      "Legal counsel for Ontario developers from land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
+      "Ontario development lawyer. Land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
     url: "https://mariottilaw.ca/real-estate-development",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Real Estate Development Law | Mariotti Law Group | Ontario",
+    title: "Development Lawyer Ontario | Planning Act | Mariotti",
     description:
-      "Legal counsel for Ontario developers from land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
-    images: ["https://mariottilaw.ca/og-image.jpg"],
+      "Ontario development lawyer. Land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Mariotti Law Group — Real Estate Development",
+    description:
+      "Ontario development lawyer. Land acquisition through registered plan. Planning approvals, subdivision agreements, OLT appeals, construction financing, Tarion compliance.",
+    url: "https://mariottilaw.ca/real-estate-development",
+    provider: {
+      "@type": "LegalService",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+      { "@type": "City", name: "Windsor, Ontario" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://mariottilaw.ca/#practices" },
+      { "@type": "ListItem", position: 3, name: "Real Estate Development", item: "https://mariottilaw.ca/real-estate-development" },
+    ],
+  },
+];
 
 export default function RealEstateDevelopmentPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 
@@ -210,7 +240,7 @@ export default function RealEstateDevelopmentPage() {
             <div className="situation-card fade-in s6">
               <h3>A project has stalled and you need to understand what comes next.</h3>
               <p>
-                Presales that did not materialize. Financing that fell through. Construction costs that blew past the proforma. Developer receiverships jumped 50% in 2024. We advise on restructuring, lender renegotiation, purchaser obligations, Tarion and HCRA implications, and when the numbers no longer work, the wind-down.
+                Presales that did not materialize. Financing that fell through. Construction costs that blew past the proforma. Developer receiverships jumped 50% in 2024. We advise on restructuring, lender renegotiation, purchaser obligations, Tarion and HCRA implications, and when the numbers no longer work, the wind-down. If enforcement is required, our <a href="/mortgage-enforcement">mortgage enforcement</a> team handles the proceedings.
               </p>
             </div>
           </div>

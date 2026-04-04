@@ -4,16 +4,26 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Resources — Mariotti Law Group",
+  title: "Resources | Legal Insights | Mariotti Law Group",
   description:
-    "Legal insights, updates, and practical guidance from Mariotti Law Group. Estate planning, corporate law, real estate, and mortgage enforcement in Ontario.",
+    "Legal insights and practical guidance from Mariotti Law Group. Ontario estate planning, mortgage enforcement, private lending, real estate, and corporate law.",
+  alternates: { canonical: "https://mariottilaw.ca/resources" },
   openGraph: {
-    title: "Resources — Mariotti Law Group",
+    title: "Resources | Legal Insights | Mariotti Law Group",
     description:
-      "Articles, updates, and practical legal guidance for Ontario families and businesses.",
+      "Legal insights and practical guidance from Mariotti Law Group. Ontario estate planning, mortgage enforcement, private lending, real estate, and corporate law.",
     url: "https://mariottilaw.ca/resources",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Resources | Legal Insights | Mariotti Law Group",
+    description:
+      "Legal insights and practical guidance from Mariotti Law Group. Ontario estate planning, mortgage enforcement, private lending, real estate, and corporate law.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
 
@@ -112,12 +122,22 @@ const categories = [
   "Real Estate",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://mariottilaw.ca/resources" },
+  ],
+};
+
 export default function ResourcesPage() {
   const featured = articles.filter((a) => a.featured);
   const rest = articles.filter((a) => !a.featured);
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 

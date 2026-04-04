@@ -5,16 +5,26 @@ import Footer from "../../Footer";
 import ScrollAnimations from "../../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Christian Mariotti — Mariotti Law Group",
+  title: "Christian Mariotti | Lawyer | Mariotti Law Group Windsor",
   description:
-    "Christian Mariotti advises private lenders, mortgage investment corporations, and real estate investors on lending transactions, mortgage enforcement, and real estate closings across Ontario.",
+    "Christian Mariotti, lawyer at Mariotti Law Group in Windsor, Ontario. Real estate, private lending, and mortgage enforcement.",
+  alternates: { canonical: "https://mariottilaw.ca/team/christian-mariotti" },
   openGraph: {
-    title: "Christian Mariotti — Mariotti Law Group",
+    title: "Christian Mariotti | Lawyer | Mariotti Law Group Windsor",
     description:
-      "Real Estate, Private Lending, Mortgage Enforcement.",
+      "Christian Mariotti, lawyer at Mariotti Law Group in Windsor, Ontario. Real estate, private lending, and mortgage enforcement.",
     url: "https://mariottilaw.ca/team/christian-mariotti",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Christian Mariotti | Lawyer | Mariotti Law Group Windsor",
+    description:
+      "Christian Mariotti, lawyer at Mariotti Law Group in Windsor, Ontario. Real estate, private lending, and mortgage enforcement.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
 
@@ -24,9 +34,44 @@ const relatedPractices = [
   { number: "05", name: "Real Estate Transactions", href: "/real-estate-transactions" },
 ];
 
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Christian Mariotti",
+    jobTitle: "Lawyer",
+    worksFor: {
+      "@type": "LegalService",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    url: "https://mariottilaw.ca/team/christian-mariotti",
+    telephone: "+1-519-997-3775",
+    email: "info@mariottilaw.ca",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "625 Erie Street East",
+      addressLocality: "Windsor",
+      addressRegion: "ON",
+      postalCode: "N9A 3Y1",
+      addressCountry: "CA",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Team", item: "https://mariottilaw.ca/team" },
+      { "@type": "ListItem", position: 3, name: "Christian Mariotti", item: "https://mariottilaw.ca/team/christian-mariotti" },
+    ],
+  },
+];
+
 export default function ChristianMariottiPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 
@@ -52,7 +97,7 @@ export default function ChristianMariottiPage() {
               <div className="bio-photo-placeholder">
                 <span>CM</span>
               </div>
-              <h2 className="bio-name">Christian Mariotti</h2>
+              <h1 className="bio-name">Christian Mariotti</h1>
               <p className="bio-focus">Real Estate, Private Lending, Mortgage Enforcement</p>
               <div className="bio-contact-divider"></div>
               <div className="bio-contact">

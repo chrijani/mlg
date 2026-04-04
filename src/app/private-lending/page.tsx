@@ -4,32 +4,62 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Private Lending & MIC Legal Services | Mariotti Law Group | Ontario",
+  title: "Private Lending Lawyer Ontario | MIC Legal | Mariotti",
   description:
-    "Documentation and closing services for Ontario private lenders and mortgage investment corporations. Custom mortgage documents, ILA, title search, registration, enforcement.",
+    "Legal services for Ontario private lenders and MICs. Custom mortgage documentation, title search, ILA, registration. FSRA compliance. Not templates. Built for enforcement.",
   alternates: { canonical: "https://mariottilaw.ca/private-lending" },
   openGraph: {
-    title: "Private Lending & MIC Legal Services | Mariotti Law Group | Ontario",
+    title: "Private Lending Lawyer Ontario | MIC Legal | Mariotti",
     description:
-      "Documentation and closing services for Ontario private lenders and mortgage investment corporations. Custom mortgage documents, ILA, title search, registration, enforcement.",
+      "Legal services for Ontario private lenders and MICs. Custom mortgage documentation, title search, ILA, registration. FSRA compliance. Not templates. Built for enforcement.",
     url: "https://mariottilaw.ca/private-lending",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Private Lending & MIC Legal Services | Mariotti Law Group | Ontario",
+    title: "Private Lending Lawyer Ontario | MIC Legal | Mariotti",
     description:
-      "Documentation and closing services for Ontario private lenders and mortgage investment corporations. Custom mortgage documents, ILA, title search, registration, enforcement.",
-    images: ["https://mariottilaw.ca/og-image.jpg"],
+      "Legal services for Ontario private lenders and MICs. Custom mortgage documentation, title search, ILA, registration. FSRA compliance. Not templates. Built for enforcement.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Mariotti Law Group — Private Lending",
+    description:
+      "Legal services for Ontario private lenders and MICs. Custom mortgage documentation, title search, ILA, registration. FSRA compliance. Not templates. Built for enforcement.",
+    url: "https://mariottilaw.ca/private-lending",
+    provider: {
+      "@type": "LegalService",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+      { "@type": "City", name: "Windsor, Ontario" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://mariottilaw.ca/#practices" },
+      { "@type": "ListItem", position: 3, name: "Private Lending", item: "https://mariottilaw.ca/private-lending" },
+    ],
+  },
+];
 
 export default function PrivateLendingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 
@@ -210,7 +240,7 @@ export default function PrivateLendingPage() {
             <div className="situation-card fade-in s6">
               <h3>A borrower has defaulted and your documents need to hold up.</h3>
               <p>
-                This is where the quality of the original documentation is tested. If the charge, the guarantee, the standard charge terms, and the ILA were done properly, enforcement is a procedural exercise. If they were not, the borrower&apos;s lawyer will find the gap. We handle enforcement through our mortgage enforcement practice.
+                This is where the quality of the original documentation is tested. If the charge, the guarantee, the standard charge terms, and the ILA were done properly, enforcement is a procedural exercise. If they were not, the borrower&apos;s lawyer will find the gap. We handle enforcement through our <a href="/mortgage-enforcement">mortgage enforcement practice</a>.
               </p>
             </div>
           </div>

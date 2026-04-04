@@ -4,17 +4,32 @@ import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import ScrollAnimations from "../../ScrollAnimations";
 
+// UPDATE THESE for each new article:
+// - title: "[Article Title] | Mariotti Law Group"
+// - description: 140-155 chars summarizing the article, include primary keyword
+// - canonical URL, OG URL
 export const metadata: Metadata = {
-  title: "Article Title Goes Here — Mariotti Law Group",
+  title: "Article Title Goes Here | Mariotti Law Group",
   description:
     "This is where the opening paragraph goes. It should summarize the key takeaway from the article in two to three sentences.",
+  robots: "noindex, nofollow",
+  alternates: { canonical: "https://mariottilaw.ca/resources/template" },
   openGraph: {
-    title: "Article Title Goes Here — Mariotti Law Group",
+    title: "Article Title Goes Here | Mariotti Law Group",
     description:
       "This is where the opening paragraph goes. It should summarize the key takeaway from the article.",
     url: "https://mariottilaw.ca/resources/template",
     siteName: "Mariotti Law Group",
-    type: "website",
+    type: "article",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Article Title Goes Here | Mariotti Law Group",
+    description:
+      "This is where the opening paragraph goes. It should summarize the key takeaway from the article.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
 
@@ -39,9 +54,42 @@ const relatedArticles = [
   },
 ];
 
+// UPDATE datePublished, dateModified, headline, author, and URL for each article
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Article Title Goes Here",
+    author: {
+      "@type": "Person",
+      name: "Christian Mariotti",
+      url: "https://mariottilaw.ca/team/christian-mariotti",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    datePublished: "2026-04-03",
+    dateModified: "2026-04-03",
+    url: "https://mariottilaw.ca/resources/template",
+    mainEntityOfPage: "https://mariottilaw.ca/resources/template",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Resources", item: "https://mariottilaw.ca/resources" },
+      { "@type": "ListItem", position: 3, name: "Article Title Goes Here", item: "https://mariottilaw.ca/resources/template" },
+    ],
+  },
+];
+
 export default function ArticleTemplatePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 

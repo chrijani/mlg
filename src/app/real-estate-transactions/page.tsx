@@ -4,32 +4,62 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Real Estate Transactions | Commercial & Residential | Mariotti Law Group | Ontario",
+  title: "Real Estate Lawyer Windsor Ontario | Mariotti Law Group",
   description:
-    "Purchases, sales, refinances, commercial acquisitions, investment properties, and leasing across Ontario. Title search, due diligence, HST structuring, Planning Act compliance.",
+    "Real estate lawyer in Windsor, Ontario. Commercial acquisitions, investment properties, residential closings, leasing, refinances. Title search through registration.",
   alternates: { canonical: "https://mariottilaw.ca/real-estate-transactions" },
   openGraph: {
-    title: "Real Estate Transactions | Commercial & Residential | Mariotti Law Group | Ontario",
+    title: "Real Estate Lawyer Windsor Ontario | Mariotti Law Group",
     description:
-      "Purchases, sales, refinances, commercial acquisitions, investment properties, and leasing across Ontario. Title search, due diligence, HST structuring, Planning Act compliance.",
+      "Real estate lawyer in Windsor, Ontario. Commercial acquisitions, investment properties, residential closings, leasing, refinances. Title search through registration.",
     url: "https://mariottilaw.ca/real-estate-transactions",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Real Estate Transactions | Commercial & Residential | Mariotti Law Group | Ontario",
+    title: "Real Estate Lawyer Windsor Ontario | Mariotti Law Group",
     description:
-      "Purchases, sales, refinances, commercial acquisitions, investment properties, and leasing across Ontario. Title search, due diligence, HST structuring, Planning Act compliance.",
-    images: ["https://mariottilaw.ca/og-image.jpg"],
+      "Real estate lawyer in Windsor, Ontario. Commercial acquisitions, investment properties, residential closings, leasing, refinances. Title search through registration.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Mariotti Law Group — Real Estate Transactions",
+    description:
+      "Real estate lawyer in Windsor, Ontario. Commercial acquisitions, investment properties, residential closings, leasing, refinances. Title search through registration.",
+    url: "https://mariottilaw.ca/real-estate-transactions",
+    provider: {
+      "@type": "LegalService",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+      { "@type": "City", name: "Windsor, Ontario" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://mariottilaw.ca/#practices" },
+      { "@type": "ListItem", position: 3, name: "Real Estate Transactions", item: "https://mariottilaw.ca/real-estate-transactions" },
+    ],
+  },
+];
 
 export default function RealEstateTransactionsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 

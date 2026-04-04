@@ -4,32 +4,62 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Estate Administration & Probate | Mariotti Law Group | Ontario",
+  title: "Probate Lawyer Ontario | Estate Administration | Mariotti",
   description:
-    "Estate administration for Ontario executors and estate trustees. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance, contested estates. Personal liability protection.",
+    "Ontario probate and estate administration. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance. Executor liability protection.",
   alternates: { canonical: "https://mariottilaw.ca/estate-administration" },
   openGraph: {
-    title: "Estate Administration & Probate | Mariotti Law Group | Ontario",
+    title: "Probate Lawyer Ontario | Estate Administration | Mariotti",
     description:
-      "Estate administration for Ontario executors and estate trustees. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance, contested estates. Personal liability protection.",
+      "Ontario probate and estate administration. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance. Executor liability protection.",
     url: "https://mariottilaw.ca/estate-administration",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estate Administration & Probate | Mariotti Law Group | Ontario",
+    title: "Probate Lawyer Ontario | Estate Administration | Mariotti",
     description:
-      "Estate administration for Ontario executors and estate trustees. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance, contested estates. Personal liability protection.",
-    images: ["https://mariottilaw.ca/og-image.jpg"],
+      "Ontario probate and estate administration. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance. Executor liability protection.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Mariotti Law Group — Estate Administration",
+    description:
+      "Ontario probate and estate administration. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance. Executor liability protection.",
+    url: "https://mariottilaw.ca/estate-administration",
+    provider: {
+      "@type": "LegalService",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+      { "@type": "City", name: "Windsor, Ontario" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://mariottilaw.ca/#practices" },
+      { "@type": "ListItem", position: 3, name: "Estate Administration", item: "https://mariottilaw.ca/estate-administration" },
+    ],
+  },
+];
 
 export default function EstateAdministrationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 

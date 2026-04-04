@@ -4,32 +4,62 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Corporate & Commercial Law | Mariotti Law Group | Ontario",
+  title: "Business Lawyer Windsor Ontario | Mariotti Law Group",
   description:
-    "Corporate counsel for Ontario businesses. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, restructuring. Advisory from startup through succession.",
+    "Windsor Ontario business lawyer. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, corporate reorganizations. Advisory from startup through succession.",
   alternates: { canonical: "https://mariottilaw.ca/corporate-commercial" },
   openGraph: {
-    title: "Corporate & Commercial Law | Mariotti Law Group | Ontario",
+    title: "Business Lawyer Windsor Ontario | Mariotti Law Group",
     description:
-      "Corporate counsel for Ontario businesses. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, restructuring. Advisory from startup through succession.",
+      "Windsor Ontario business lawyer. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, corporate reorganizations. Advisory from startup through succession.",
     url: "https://mariottilaw.ca/corporate-commercial",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Corporate & Commercial Law | Mariotti Law Group | Ontario",
+    title: "Business Lawyer Windsor Ontario | Mariotti Law Group",
     description:
-      "Corporate counsel for Ontario businesses. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, restructuring. Advisory from startup through succession.",
-    images: ["https://mariottilaw.ca/og-image.jpg"],
+      "Windsor Ontario business lawyer. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, corporate reorganizations. Advisory from startup through succession.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Mariotti Law Group — Corporate & Commercial",
+    description:
+      "Windsor Ontario business lawyer. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, corporate reorganizations. Advisory from startup through succession.",
+    url: "https://mariottilaw.ca/corporate-commercial",
+    provider: {
+      "@type": "LegalService",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+      { "@type": "City", name: "Windsor, Ontario" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://mariottilaw.ca/#practices" },
+      { "@type": "ListItem", position: 3, name: "Corporate & Commercial", item: "https://mariottilaw.ca/corporate-commercial" },
+    ],
+  },
+];
 
 export default function CorporateCommercialPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 
