@@ -35,7 +35,7 @@ export default function MobileNav({ services }: { services: Service[] }) {
             <line x1="18" y1="2" x2="2" y2="18" stroke="#141414" strokeWidth="1.5"/>
           </svg>
         </button>
-        <a href="#" onClick={close}>Team</a>
+        <a href="/team" onClick={close}>Team</a>
         <button
           className="mobile-accordion-trigger"
           aria-expanded={servicesOpen}

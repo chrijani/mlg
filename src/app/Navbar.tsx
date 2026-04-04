@@ -42,7 +42,7 @@ export default function Navbar() {
           />
         </a>
         <ul className="nav-links">
-          <li><a href="#">Team</a></li>
+          <li><a href="/team">Team</a></li>
           <li
             ref={dropdownRef}
             className="nav-services-wrap"
