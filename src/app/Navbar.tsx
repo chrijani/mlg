@@ -8,7 +8,7 @@ const services = [
   { label: "Wills & Estate Planning", href: "/estate-planning" },
   { label: "Estate Administration", href: "/estate-administration" },
   { label: "Mortgage Enforcement", href: "/mortgage-enforcement" },
-  { label: "Private Lending", href: "#" },
+  { label: "Private Lending", href: "/private-lending" },
   { label: "Real Estate Transactions", href: "#" },
   { label: "Real Estate Development", href: "#" },
   { label: "Corporate & Commercial", href: "/corporate-commercial" },

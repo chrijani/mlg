@@ -145,7 +145,7 @@ export default function Home() {
                 agreements built for the specific transaction and the specific borrower. Not templates.
                 Not precedents pulled from a shelf.
               </p>
-              <a href="#" className="card-link">
+              <a href="/private-lending" className="card-link">
                 Learn more <ArrowIcon />
               </a>
             </div>

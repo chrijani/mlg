@@ -1132,6 +1132,20 @@ footer {
   font-size: 0.92rem;
 }
 
+.source-link {
+  color: var(--dim-gray);
+  text-decoration: underline;
+  text-decoration-color: var(--timberwolf-dark);
+  text-underline-offset: 2px;
+  transition: color 0.3s, text-decoration-color 0.3s;
+  font-weight: 400;
+}
+
+.source-link:hover {
+  color: var(--night);
+  text-decoration-color: var(--night);
+}
+
 /* =========================================
    SITUATIONS GRID (Service Pages)
    ========================================= */
