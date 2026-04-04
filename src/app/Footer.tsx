@@ -13,19 +13,19 @@ export default function Footer() {
             <h4>Services</h4>
             <ul>
               <li><a href="/estate-planning">Wills &amp; Estate Planning</a></li>
-              <li><a href="/#practices">Estate Administration</a></li>
-              <li><a href="/#practices">Mortgage Enforcement</a></li>
-              <li><a href="/#practices">Private Lending</a></li>
-              <li><a href="/#practices">Real Estate Transactions</a></li>
-              <li><a href="/#practices">Real Estate Development</a></li>
-              <li><a href="/#practices">Corporate &amp; Commercial</a></li>
+              <li><a href="#">Estate Administration</a></li>
+              <li><a href="#">Mortgage Enforcement</a></li>
+              <li><a href="#">Private Lending</a></li>
+              <li><a href="#">Real Estate Transactions</a></li>
+              <li><a href="#">Real Estate Development</a></li>
+              <li><a href="#">Corporate &amp; Commercial</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>Firm</h4>
             <ul>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/#approach">Approach</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Resources</a></li>
               <li><a href="/#contact">Contact</a></li>
             </ul>
           </div>
