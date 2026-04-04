@@ -7,7 +7,7 @@ import MobileNav from "./MobileNav";
 const services = [
   { label: "Wills & Estate Planning", href: "/estate-planning" },
   { label: "Estate Administration", href: "/estate-administration" },
-  { label: "Mortgage Enforcement", href: "#" },
+  { label: "Mortgage Enforcement", href: "/mortgage-enforcement" },
   { label: "Private Lending", href: "#" },
   { label: "Real Estate Transactions", href: "#" },
   { label: "Real Estate Development", href: "#" },

@@ -131,7 +131,7 @@ export default function Home() {
                 applications. Court-ordered sales. Personal judgment on guarantees. Documentation
                 errors delay enforcement by months. We do not make them.
               </p>
-              <a href="#" className="card-link">
+              <a href="/mortgage-enforcement" className="card-link">
                 Learn more <ArrowIcon />
               </a>
             </div>
