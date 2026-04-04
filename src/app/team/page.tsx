@@ -1,54 +1,73 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Our Team — Mariotti Law Group",
+  title: "Our Lawyers | Mariotti Law Group | Ontario",
   description:
-    "Meet the lawyers at Mariotti Law Group. Five practitioners. Seven practice areas. Six decades of advising Ontario families, lenders, and businesses.",
+    "Five lawyers with defined areas of practice. Estate planning, mortgage enforcement, real estate, private lending, corporate law. Mariotti Law Group, Windsor, Ontario.",
+  alternates: { canonical: "https://mariottilaw.ca/team" },
   openGraph: {
-    title: "Our Team — Mariotti Law Group",
+    title: "Our Lawyers | Mariotti Law Group | Ontario",
     description:
-      "The people behind the counsel. Meet the team that has advised Ontario families, lenders, and businesses since 1965.",
+      "Five lawyers with defined areas of practice. Estate planning, mortgage enforcement, real estate, private lending, corporate law. Mariotti Law Group, Windsor, Ontario.",
     url: "https://mariottilaw.ca/team",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Lawyers | Mariotti Law Group | Ontario",
+    description: "Five lawyers with defined areas of practice. Mariotti Law Group, Windsor, Ontario.",
+    images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
 
-const team = [
+const lawyers = [
+  {
+    name: "Christian Mariotti",
+    initials: "CM",
+    focus: "Real Estate, Private Lending, Mortgage Enforcement",
+    slug: "christian-mariotti",
+  },
   {
     name: "Christian Janisse",
-    title: "Managing Partner",
-    bio: "Christian leads the firm\u2019s corporate, commercial, and real estate practice groups. He advises business owners, developers, and private lenders on transactions that require precision documentation and forward-looking strategy. His clients trust him because he identifies issues before they become problems\u2014and because he speaks plainly about what needs to happen next.",
-    areas: ["Corporate & Commercial", "Real Estate Transactions", "Private Lending", "Real Estate Development"],
+    initials: "CJ",
+    focus: "Practice focus to be confirmed",
+    slug: "christian-janisse",
   },
   {
     name: "David Coscarella",
-    title: "Partner",
-    bio: "David brings a depth of experience in mortgage enforcement and private lending that comes from handling hundreds of files to resolution. When borrowers default, David acts. Power-of-sale proceedings, receivership applications, court-ordered sales\u2014he executes with the diligence that lenders depend on when the stakes are highest.",
-    areas: ["Mortgage Enforcement", "Private Lending", "Real Estate Transactions"],
+    initials: "DC",
+    focus: "Practice focus to be confirmed",
+    slug: "david-coscarella",
   },
   {
     name: "Joya Innocente",
-    title: "Associate",
-    bio: "Joya\u2019s practice focuses on estate planning and estate administration\u2014the area of law where careful drafting today prevents costly disputes tomorrow. She works with families, business owners, and individuals to build estate plans that reflect their actual circumstances, not a template. When estates need to be administered, she guides trustees through every step with patience and precision.",
-    areas: ["Wills & Estate Planning", "Estate Administration"],
+    initials: "JI",
+    focus: "Practice focus to be confirmed",
+    slug: "joya-innocente",
   },
   {
     name: "Lauren Del Greco",
-    title: "Associate",
-    bio: "Lauren handles residential and commercial real estate transactions from agreement to closing. She understands that every deal has a timeline, and every delay has a cost. Her clients\u2014whether first-time buyers or experienced investors\u2014value her attention to detail and her ability to keep complex closings on track.",
-    areas: ["Real Estate Transactions", "Real Estate Development"],
-  },
-  {
-    name: "Nicole Couvillon",
-    title: "Associate",
-    bio: "Nicole supports the firm\u2019s corporate and commercial practice, advising on business purchases and sales, shareholder agreements, and commercial contracts. She approaches every engagement with the understanding that the agreement you sign today is the one you\u2019ll rely on when circumstances change.",
-    areas: ["Corporate & Commercial", "Real Estate Transactions"],
+    initials: "LDG",
+    focus: "Practice focus to be confirmed",
+    slug: "lauren-del-greco",
   },
 ];
+
+function ArrowSVG() {
+  return (
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "0.4rem" }}>
+      <path d="M9 1L13 5L9 9" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M1 5H13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  );
+}
 
 export default function TeamPage() {
   return (
@@ -57,97 +76,39 @@ export default function TeamPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero page-hero-short">
+      <section className="page-hero page-hero-short" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
             <span className="sep">/</span>
-            Our Team
+            Team
           </div>
           <h1 className="fade-in s1">
-            The people behind the counsel.
+            Five lawyers. Defined areas of practice. The person advising you has seen your situation before.
           </h1>
-          <p className="lead fade-in s2">
-            Five practitioners. Seven practice areas. Every engagement at Mariotti Law Group
-            is led by a lawyer who knows your file, understands your objectives, and is
-            accountable for the outcome.
-          </p>
-        </div>
-      </section>
-
-      {/* Team Philosophy */}
-      <section className="team-philosophy">
-        <div className="container-narrow">
-          <div className="fade-in">
-            <p className="team-philosophy-text">
-              A law firm is only as good as the people who do the work. At Mariotti Law Group,
-              every client is served by a lawyer\u2014not a clerk, not a paralegal handling the file
-              alone, not an associate you have never met. You will know your lawyer by name. They
-              will know your matter by heart.
-            </p>
-            <p className="team-philosophy-text">
-              We hire carefully. We train rigorously. And we have built a team that shares a single
-              conviction: the best legal work is invisible. When it is done right, you never see the
-              problems that were prevented.
-            </p>
-          </div>
         </div>
       </section>
 
       {/* Team Grid */}
-      <section className="team-section">
+      <section className="team-grid-section">
         <div className="container">
-          {team.map((member, i) => (
-            <div
-              key={member.name}
-              className={`team-member fade-in stagger-${(i % 3) + 1}`}
-            >
-              <div className="team-member-photo">
-                <div className="team-photo-placeholder">
-                  <span>{member.name.split(" ").map(n => n[0]).join("")}</span>
+          <div className="team-card-grid">
+            {lawyers.map((lawyer, i) => (
+              <Link
+                key={lawyer.slug}
+                href={`/team/${lawyer.slug}`}
+                className={`team-card fade-in stagger-${(i % 3) + 1}`}
+              >
+                <div className="team-card-photo">
+                  <span className="team-card-initials">{lawyer.initials}</span>
                 </div>
-              </div>
-              <div className="team-member-info">
-                <span className="text-sm-label text-gray">{member.title}</span>
-                <h2>{member.name}</h2>
-                <p className="team-member-bio">{member.bio}</p>
-                <div className="team-member-areas">
-                  {member.areas.map((area) => (
-                    <span key={area} className="team-area-tag">{area}</span>
-                  ))}
+                <div className="team-card-name">{lawyer.name}</div>
+                <div className="team-card-focus">{lawyer.focus}</div>
+                <div className="team-card-link">
+                  View profile <ArrowSVG />
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Values Strip */}
-      <section className="dark-section">
-        <div className="container">
-          <h2 className="fade-in" style={{ textAlign: "center", marginBottom: "1rem" }}>
-            How we work
-          </h2>
-          <p className="fade-in stagger-1" style={{ textAlign: "center", maxWidth: "560px", margin: "0 auto 3rem" }}>
-            Every member of the team operates by the same principles.
-          </p>
-          <div className="stat-row fade-in stagger-2">
-            <div className="stat-item">
-              <div className="stat-number">Direct</div>
-              <p>Your lawyer is your point of contact. No runaround. No layers.</p>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">Precise</div>
-              <p>We draft, review, and advise with the care that comes from knowing the cost of a mistake.</p>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">Candid</div>
-              <p>We tell you what you need to hear. If the answer is no, we say so early.</p>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">Prepared</div>
-              <p>We anticipate issues before they surface. The value is in what we prevent.</p>
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -156,19 +117,17 @@ export default function TeamPage() {
       <section className="cta-section" id="contact">
         <div className="container-narrow" style={{ textAlign: "center" }}>
           <span className="text-sm-label text-gray fade-in" style={{ display: "block", marginBottom: "1rem" }}>
-            Work With Us
+            Start Here
           </span>
-          <h2 className="fade-in stagger-1">
-            The right lawyer for the work ahead.
+          <h2 className="fade-in s1">
+            The right lawyer for your matter depends on what you are facing.
           </h2>
-          <p className="fade-in stagger-2">
-            Whether you need to plan an estate, close a transaction, enforce a mortgage, or
-            structure a business, a conversation is the place to start. Tell us what you are
-            facing, and we will connect you with the right member of our team.
+          <p className="fade-in s2">
+            Tell us your situation. We will connect you with the member of our team whose practice matches your needs.
           </p>
-          <div className="cta-buttons fade-in stagger-3">
-            <a href="tel:+1XXXXXXXXXX" className="btn">Call Us</a>
-            <a href="/contact" className="btn btn-filled">Schedule a Consultation</a>
+          <div className="cta-buttons fade-in s3">
+            <a href="tel:+15199973775" className="btn">Call Us</a>
+            <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>
       </section>

@@ -4,16 +4,26 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Wills & Estate Planning — Mariotti Law Group",
+  title: "Wills & Estate Planning | Mariotti Law Group | Ontario",
   description:
-    "Wills, powers of attorney, trusts, and estate plans for Ontario families. Mariotti Law Group helps you protect your family, your assets, and your legacy.",
+    "Wills, powers of attorney, trusts, and estate plans for Ontario families. Blended families, business owners, Henson trusts, multiple wills strategies. Founded 1965.",
+  alternates: { canonical: "https://mariottilaw.ca/estate-planning" },
   openGraph: {
-    title: "Wills & Estate Planning — Mariotti Law Group",
+    title: "Wills & Estate Planning | Mariotti Law Group | Ontario",
     description:
-      "More than half of Canadians do not have a will. The gap between knowing you need a plan and actually having one is where the risk lives.",
+      "Wills, powers of attorney, trusts, and estate plans for Ontario families. Blended families, business owners, Henson trusts, multiple wills strategies. Founded 1965.",
     url: "https://mariottilaw.ca/estate-planning",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wills & Estate Planning | Mariotti Law Group | Ontario",
+    description:
+      "Wills, powers of attorney, trusts, and estate plans for Ontario families. Blended families, business owners, Henson trusts, multiple wills strategies. Founded 1965.",
+    images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
 
@@ -24,7 +34,7 @@ export default function EstatePlanningPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero" data-number="01">
+      <section className="page-hero" data-number="01" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
@@ -270,7 +280,7 @@ export default function EstatePlanningPage() {
             If it does, we will tell you. If it does not, we will explain why and what to do about it.
           </p>
           <div className="cta-buttons fade-in s3">
-            <a href="tel:+15199771965" className="btn">Call Us</a>
+            <a href="tel:+15199973775" className="btn">Call Us</a>
             <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>

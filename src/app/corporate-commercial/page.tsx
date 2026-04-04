@@ -4,16 +4,26 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Corporate & Commercial — Mariotti Law Group",
+  title: "Corporate & Commercial Law | Mariotti Law Group | Ontario",
   description:
-    "Corporate law, shareholder agreements, business purchases and sales, commercial contracts, and corporate reorganizations for Ontario businesses.",
+    "Corporate counsel for Ontario businesses. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, restructuring. Advisory from startup through succession.",
+  alternates: { canonical: "https://mariottilaw.ca/corporate-commercial" },
   openGraph: {
-    title: "Corporate & Commercial — Mariotti Law Group",
+    title: "Corporate & Commercial Law | Mariotti Law Group | Ontario",
     description:
-      "Every business decision has a legal dimension. Most owners find out which one after the fact.",
+      "Corporate counsel for Ontario businesses. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, restructuring. Advisory from startup through succession.",
     url: "https://mariottilaw.ca/corporate-commercial",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate & Commercial Law | Mariotti Law Group | Ontario",
+    description:
+      "Corporate counsel for Ontario businesses. Incorporations, shareholder agreements, business purchases and sales, commercial contracts, restructuring. Advisory from startup through succession.",
+    images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
 
@@ -24,7 +34,7 @@ export default function CorporateCommercialPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero" data-number="07">
+      <section className="page-hero" data-number="07" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
@@ -301,7 +311,7 @@ export default function CorporateCommercialPage() {
             conversation starts the same way.
           </p>
           <div className="cta-buttons fade-in s3">
-            <a href="tel:+15199771965" className="btn">Call Us</a>
+            <a href="tel:+15199973775" className="btn">Call Us</a>
             <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>

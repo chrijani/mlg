@@ -4,16 +4,26 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Private Lending — Mariotti Law Group",
+  title: "Private Lending & MIC Legal Services | Mariotti Law Group | Ontario",
   description:
-    "Private mortgage documentation, closings, and lender representation for Ontario private lenders and MICs. Mariotti Law Group drafts documents built for enforcement.",
+    "Documentation and closing services for Ontario private lenders and mortgage investment corporations. Custom mortgage documents, ILA, title search, registration, enforcement.",
+  alternates: { canonical: "https://mariottilaw.ca/private-lending" },
   openGraph: {
-    title: "Private Lending — Mariotti Law Group",
+    title: "Private Lending & MIC Legal Services | Mariotti Law Group | Ontario",
     description:
-      "Sixty-five percent of private mortgage files reviewed by FSRA had deficient documentation. Yours might be among them.",
+      "Documentation and closing services for Ontario private lenders and mortgage investment corporations. Custom mortgage documents, ILA, title search, registration, enforcement.",
     url: "https://mariottilaw.ca/private-lending",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Private Lending & MIC Legal Services | Mariotti Law Group | Ontario",
+    description:
+      "Documentation and closing services for Ontario private lenders and mortgage investment corporations. Custom mortgage documents, ILA, title search, registration, enforcement.",
+    images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
 
@@ -24,7 +34,7 @@ export default function PrivateLendingPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero" data-number="04">
+      <section className="page-hero" data-number="04" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
@@ -220,7 +230,7 @@ export default function PrivateLendingPage() {
             Whether you are funding your first mortgage or your five hundredth, the conversation starts with the loan and ends with documents that protect it.
           </p>
           <div className="cta-buttons fade-in s3">
-            <a href="tel:+1XXXXXXXXXX" className="btn">Call Us</a>
+            <a href="tel:+15199973775" className="btn">Call Us</a>
             <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>

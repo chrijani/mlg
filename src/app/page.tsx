@@ -12,14 +12,47 @@ function ArrowIcon() {
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  name: "Mariotti Law Group",
+  description: "Ontario law firm advising families, lenders, and businesses since 1965. Estate planning, mortgage enforcement, real estate, private lending, corporate transactions.",
+  url: "https://mariottilaw.ca",
+  telephone: "+1-519-997-3775",
+  faxNumber: "+1-226-620-1943",
+  email: "info@mariottilaw.ca",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "625 Erie Street East",
+    addressLocality: "Windsor",
+    addressRegion: "ON",
+    postalCode: "N9A 3Y1",
+    addressCountry: "CA",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: 42.3149, longitude: -83.0364 },
+  foundingDate: "1965",
+  founder: { "@type": "Person", name: "Anthony Mariotti" },
+  areaServed: { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+  knowsAbout: [
+    "Estate Planning", "Estate Administration", "Mortgage Enforcement",
+    "Private Lending", "Real Estate Transactions", "Real Estate Development",
+    "Corporate Law", "Commercial Law",
+  ],
+  sameAs: [],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ScrollAnimations />
       <Navbar />
 
       {/* Hero */}
-      <section className="hero" id="home">
+      <section className="hero" id="main-content">
         <div className="hero-image-wrap">
           <Image
             src="/homepage_hero_building.png"
@@ -210,7 +243,7 @@ export default function Home() {
             and we will tell you how we can help.
           </p>
           <div className="cta-buttons fade-in stagger-3">
-            <a href="tel:+1XXXXXXXXXX" className="btn">Call Us</a>
+            <a href="tel:+15199973775" className="btn">Call Us</a>
             <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>

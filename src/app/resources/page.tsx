@@ -122,7 +122,7 @@ export default function ResourcesPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero page-hero-short">
+      <section className="page-hero page-hero-short" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>

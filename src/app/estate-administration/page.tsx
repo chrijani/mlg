@@ -4,16 +4,26 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Estate Administration — Mariotti Law Group",
+  title: "Estate Administration & Probate | Mariotti Law Group | Ontario",
   description:
-    "Estate administration for Ontario executors and estate trustees. Court applications, tax filings, creditor notices, beneficiary distributions, and trustee discharge.",
+    "Estate administration for Ontario executors and estate trustees. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance, contested estates. Personal liability protection.",
+  alternates: { canonical: "https://mariottilaw.ca/estate-administration" },
   openGraph: {
-    title: "Estate Administration — Mariotti Law Group",
+    title: "Estate Administration & Probate | Mariotti Law Group | Ontario",
     description:
-      "You were named executor. You have 180 days, a list of obligations, and personal liability for getting it wrong.",
+      "Estate administration for Ontario executors and estate trustees. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance, contested estates. Personal liability protection.",
     url: "https://mariottilaw.ca/estate-administration",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Estate Administration & Probate | Mariotti Law Group | Ontario",
+    description:
+      "Estate administration for Ontario executors and estate trustees. Certificate of Appointment, Estate Administration Tax, creditor notices, CRA clearance, contested estates. Personal liability protection.",
+    images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
 
@@ -24,7 +34,7 @@ export default function EstateAdministrationPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero" data-number="02">
+      <section className="page-hero" data-number="02" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
@@ -272,7 +282,7 @@ export default function EstateAdministrationPage() {
             are a beneficiary with concerns, the same applies.
           </p>
           <div className="cta-buttons fade-in s3">
-            <a href="tel:+15199771965" className="btn">Call Us</a>
+            <a href="tel:+15199973775" className="btn">Call Us</a>
             <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>

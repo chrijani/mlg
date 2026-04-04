@@ -4,16 +4,26 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Mortgage Enforcement — Mariotti Law Group",
+  title: "Mortgage Enforcement | Power of Sale, Receivership | Mariotti Law Group | Ontario",
   description:
-    "Power of sale, receivership, judicial sale, and foreclosure for Ontario lenders. Mariotti Law Group enforces mortgages with precision under the Mortgages Act.",
+    "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. We act for private lenders, MICs, credit unions, and institutional lenders.",
+  alternates: { canonical: "https://mariottilaw.ca/mortgage-enforcement" },
   openGraph: {
-    title: "Mortgage Enforcement — Mariotti Law Group",
+    title: "Mortgage Enforcement | Power of Sale, Receivership | Mariotti Law Group | Ontario",
     description:
-      "Five remedies. Each one works. None of them forgive a procedural mistake.",
+      "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. We act for private lenders, MICs, credit unions, and institutional lenders.",
     url: "https://mariottilaw.ca/mortgage-enforcement",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mortgage Enforcement | Power of Sale, Receivership | Mariotti Law Group | Ontario",
+    description:
+      "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. We act for private lenders, MICs, credit unions, and institutional lenders.",
+    images: ["https://mariottilaw.ca/og-image.jpg"],
   },
 };
 
@@ -24,7 +34,7 @@ export default function MortgageEnforcementPage() {
       <Navbar />
 
       {/* Page Hero */}
-      <section className="page-hero" data-number="03">
+      <section className="page-hero" data-number="03" id="main-content">
         <div className="container">
           <div className="breadcrumb fade-in">
             <a href="/">Home</a>
@@ -220,7 +230,7 @@ export default function MortgageEnforcementPage() {
             Whether you need to enforce a single mortgage or manage defaults across a lending portfolio, the first conversation determines how quickly recovery begins.
           </p>
           <div className="cta-buttons fade-in s3">
-            <a href="tel:+1XXXXXXXXXX" className="btn">Call Us</a>
+            <a href="tel:+15199973775" className="btn">Call Us</a>
             <a href="mailto:info@mariottilaw.ca" className="btn btn-filled">Send an Email</a>
           </div>
         </div>
