@@ -51,7 +51,7 @@ export default function MobileNav({ services }: { services: Service[] }) {
             <a key={s.label} href={s.href} onClick={close}>{s.label}</a>
           ))}
         </div>
-        <a href="#" onClick={close}>Resources</a>
+        <a href="/resources" onClick={close}>Resources</a>
         <a href="/contact" onClick={close}>Contact</a>
       </div>
     </>
