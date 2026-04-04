@@ -187,7 +187,7 @@ export default function Home() {
                 When they change, you need the agreement you signed three years ago to say exactly
                 what it needs to say. We write those agreements.
               </p>
-              <a href="#" className="card-link">
+              <a href="/corporate-commercial" className="card-link">
                 Learn more <ArrowIcon />
               </a>
             </div>

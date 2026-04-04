@@ -11,7 +11,7 @@ const services = [
   { label: "Private Lending", href: "#" },
   { label: "Real Estate Transactions", href: "#" },
   { label: "Real Estate Development", href: "#" },
-  { label: "Corporate & Commercial", href: "#" },
+  { label: "Corporate & Commercial", href: "/corporate-commercial" },
 ];
 
 export default function Navbar() {

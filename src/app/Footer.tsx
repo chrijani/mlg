@@ -18,7 +18,7 @@ export default function Footer() {
               <li><a href="#">Private Lending</a></li>
               <li><a href="#">Real Estate Transactions</a></li>
               <li><a href="#">Real Estate Development</a></li>
-              <li><a href="#">Corporate &amp; Commercial</a></li>
+              <li><a href="/corporate-commercial">Corporate &amp; Commercial</a></li>
             </ul>
           </div>
           <div className="footer-col">
