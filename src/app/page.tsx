@@ -22,7 +22,7 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="hero-image-wrap">
           <Image
-            src="/homepage_hero_image.png"
+            src="/homepage_hero_building.png"
             alt="Mariotti Law Group office"
             fill
             priority
