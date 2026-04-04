@@ -139,30 +139,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Heritage Strip */}
-      <div className="heritage">
-        <div className="container">
-          <div className="heritage-inner">
-            <div className="heritage-stat fade-in stagger-1">
-              <div className="number">1965</div>
-              <div className="label">Year Founded</div>
-            </div>
-            <div className="heritage-stat fade-in stagger-2">
-              <div className="number">5</div>
-              <div className="label">Core Practices</div>
-            </div>
-            <div className="heritage-stat fade-in stagger-3">
-              <div className="number">60</div>
-              <div className="label">Years of Practice</div>
-            </div>
-            <div className="heritage-stat fade-in stagger-4">
-              <div className="number">18</div>
-              <div className="label">Professionals</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Philosophy */}
       <section className="philosophy" id="about">
         <div className="container">
