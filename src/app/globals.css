@@ -409,6 +409,10 @@ nav.scrolled {
   font-size: 1rem;
 }
 
+.hero-left .btn {
+  align-self: flex-start;
+}
+
 .hero-image-wrap {
   position: absolute;
   top: 0;
