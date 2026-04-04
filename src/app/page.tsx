@@ -38,11 +38,11 @@ export default function Home() {
             <Image
               src="/homepage_hero_image.png"
               alt="Mariotti Law Group office"
-              width={800}
-              height={1000}
+              fill
               priority
               className="hero-image fade-in stagger-4"
             />
+            <div className="hero-image-overlay" />
           </div>
         </div>
       </section>
