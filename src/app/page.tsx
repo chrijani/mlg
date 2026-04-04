@@ -1,5 +1,6 @@
 import ScrollAnimations from "./ScrollAnimations";
-import MobileNav from "./MobileNav";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function ArrowIcon() {
   return (
@@ -14,30 +15,7 @@ export default function Home() {
   return (
     <>
       <ScrollAnimations />
-
-      {/* Navigation */}
-      <nav id="navbar">
-        <div className="nav-inner">
-          <a href="#" className="nav-logo">
-            <div className="nav-logo-mark">
-              <svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="21" cy="21" r="20" fill="none" stroke="#141414" strokeWidth="1.2" />
-                <text x="21" y="27" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="22" fontWeight="400" fill="#141414">M</text>
-              </svg>
-            </div>
-            <div className="nav-logo-text">
-              Mariotti<span>Law Group</span>
-            </div>
-          </a>
-          <ul className="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#practices">Services</a></li>
-            <li><a href="#approach">Approach</a></li>
-            <li><a href="#contact" className="nav-cta">Contact</a></li>
-          </ul>
-          <MobileNav />
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero */}
       <section className="hero" id="home">
@@ -95,7 +73,7 @@ export default function Home() {
                 families, business interests, tax exposure, and the complications that only surface
                 when it is too late to fix them.
               </p>
-              <a href="#estate-planning" className="card-link">
+              <a href="/estate-planning" className="card-link">
                 Learn more <ArrowIcon />
               </a>
             </div>
@@ -258,47 +236,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Estate Planning Detail */}
-      <section className="detail-section" id="estate-planning">
-        <div className="container">
-          <div className="detail-content">
-            <div className="detail-sidebar fade-in">
-              <span className="text-sm-label">Wills &amp; Estate Planning</span>
-              <h2>The plan that protects your family when you cannot.</h2>
-            </div>
-            <div className="detail-main fade-in stagger-2">
-              <p>
-                You have spent decades building something. A home. A business. A portfolio. A family.
-                And at some point, the question becomes unavoidable: what happens to all of it if
-                something happens to you?
-              </p>
-              <p>
-                Without a current, properly drafted estate plan, the answer is that the government
-                decides. Ontario&apos;s Succession Law Reform Act provides a default distribution
-                scheme that has nothing to do with your wishes, your family dynamics, or the tax
-                consequences. A will overrides those defaults. A power of attorney prevents a
-                court-supervised process that can cost your family $20,000 or more and take six
-                months to resolve.
-              </p>
-              <p>
-                We prepare wills, powers of attorney for property, and powers of attorney for
-                personal care. For clients with more complex situations, we structure trusts, plan
-                for tax-efficient asset transfers, address business succession, and coordinate with
-                accountants and financial advisors to build plans that work across disciplines.
-              </p>
-              <p>
-                Every plan begins with a conversation. We need to understand your family, your
-                assets, your concerns, and the outcomes that matter most to you. Only then can we
-                recommend the right instruments and draft documents that do what you need them to do.
-              </p>
-              <div style={{ marginTop: "2rem" }}>
-                <a href="#contact" className="btn">Schedule a Consultation</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="cta-section" id="contact">
         <div className="container-narrow" style={{ textAlign: "center" }}>
@@ -320,51 +257,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer>
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <div className="nav-logo-text" style={{ color: "var(--timberwolf)" }}>
-                Mariotti<span style={{ color: "var(--dim-gray)" }}>Law Group</span>
-              </div>
-              <p>Advising Ontario families, lenders, and businesses since 1965.</p>
-            </div>
-            <div className="footer-col">
-              <h4>Services</h4>
-              <ul>
-                <li><a href="#practices">Wills &amp; Estate Planning</a></li>
-                <li><a href="#practices">Estate Administration</a></li>
-                <li><a href="#practices">Mortgage Enforcement</a></li>
-                <li><a href="#practices">Commercial Real Estate</a></li>
-                <li><a href="#practices">Corporate &amp; Commercial</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Firm</h4>
-              <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#approach">Approach</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Connect</h4>
-              <ul>
-                <li><a href="#">LinkedIn</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; 2026 Mariotti Law Group. All rights reserved.</p>
-            <div className="footer-legal">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Use</a>
-              <a href="#">Accessibility</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

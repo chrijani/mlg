@@ -822,6 +822,224 @@ footer {
 .stagger-3 { transition-delay: 0.3s; }
 .stagger-4 { transition-delay: 0.4s; }
 .stagger-5 { transition-delay: 0.5s; }
+.s1 { transition-delay: 0.08s; }
+.s2 { transition-delay: 0.16s; }
+.s3 { transition-delay: 0.24s; }
+.s4 { transition-delay: 0.32s; }
+.s5 { transition-delay: 0.4s; }
+.s6 { transition-delay: 0.48s; }
+
+/* =========================================
+   PAGE HERO (Service Pages)
+   ========================================= */
+
+.page-hero {
+  padding: clamp(8rem, 14vw, 12rem) 0 clamp(4rem, 7vw, 6rem);
+  background: var(--timberwolf);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: attr(data-number);
+  position: absolute;
+  right: clamp(2rem, 8vw, 8rem);
+  bottom: -2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(8rem, 18vw, 16rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--night);
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.page-hero .breadcrumb {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--dim-gray);
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-hero .breadcrumb a {
+  color: var(--dim-gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.page-hero .breadcrumb a:hover { color: var(--night); }
+
+.page-hero .breadcrumb .sep {
+  margin: 0 0.5rem;
+  opacity: 0.4;
+}
+
+.page-hero h1 {
+  max-width: 680px;
+  margin-bottom: 1.8rem;
+  font-weight: 300;
+}
+
+.page-hero .lead {
+  max-width: 560px;
+  color: var(--dim-gray);
+  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+}
+
+/* =========================================
+   CONTENT SECTIONS (Service Pages)
+   ========================================= */
+
+.content-section {
+  background: var(--white);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.content-label {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+.content-label .section-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--timberwolf-dark);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.content-label h2 {
+  font-size: clamp(1.4rem, 2vw, 1.7rem);
+  line-height: 1.3;
+}
+
+.content-body p {
+  margin-bottom: 1.5rem;
+  color: var(--dim-gray);
+}
+
+.content-body p.opener {
+  color: var(--night);
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+}
+
+.content-body .highlight {
+  background: var(--timberwolf-light);
+  padding: clamp(1.5rem, 2.5vw, 2.2rem);
+  margin: 1.8rem 0;
+  border-left: 2px solid var(--night);
+}
+
+.content-body .highlight p {
+  margin-bottom: 0;
+  color: var(--night);
+  font-weight: 400;
+  font-size: 0.92rem;
+}
+
+/* =========================================
+   SITUATIONS GRID (Service Pages)
+   ========================================= */
+
+.situations {
+  background: var(--timberwolf-light);
+}
+
+.situations-header {
+  margin-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.situations-header .text-sm-label {
+  color: var(--dim-gray);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.situations-header p {
+  max-width: 560px;
+  color: var(--dim-gray);
+  margin-top: 1.2rem;
+}
+
+.situations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1px;
+  background: rgba(20, 20, 20, 0.06);
+}
+
+.situation-card {
+  background: var(--white);
+  padding: clamp(1.8rem, 2.5vw, 2.4rem);
+  transition: all 0.4s var(--transition);
+}
+
+.situation-card:hover {
+  background: var(--timberwolf);
+}
+
+.situation-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.35;
+}
+
+.situation-card p {
+  color: var(--dim-gray);
+  font-size: 0.85rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   DARK SECTION (Stats)
+   ========================================= */
+
+.dark-section {
+  background: var(--night);
+  color: var(--white);
+}
+
+.dark-section h2 {
+  color: var(--timberwolf);
+}
+
+.dark-section p {
+  color: var(--dim-gray);
+}
+
+.dark-section .stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  margin-top: clamp(2.5rem, 4vw, 4rem);
+}
+
+.stat-item .stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  color: var(--timberwolf);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-item .stat-text {
+  font-size: 0.82rem;
+  color: var(--dim-gray);
+  line-height: 1.5;
+  font-weight: 300;
+}
 
 /* =========================================
    RESPONSIVE
@@ -836,6 +1054,8 @@ footer {
   .heritage-inner { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .detail-content { grid-template-columns: 1fr; }
+  .content-grid { grid-template-columns: 1fr; }
+  .content-label { position: static; margin-bottom: 1.5rem; }
 }
 
 @media (max-width: 768px) {
@@ -847,4 +1067,7 @@ footer {
   .cta-buttons { flex-direction: column; align-items: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .footer-legal { justify-content: center; }
+  .situations-grid { grid-template-columns: 1fr; }
+  .dark-section .stat-row { grid-template-columns: 1fr; }
+  .page-hero::after { display: none; }
 }
