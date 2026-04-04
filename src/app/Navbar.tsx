@@ -10,7 +10,7 @@ const services = [
   { label: "Mortgage Enforcement", href: "/mortgage-enforcement" },
   { label: "Private Lending", href: "/private-lending" },
   { label: "Real Estate Transactions", href: "#" },
-  { label: "Real Estate Development", href: "#" },
+  { label: "Real Estate Development", href: "/real-estate-development" },
   { label: "Corporate & Commercial", href: "/corporate-commercial" },
 ];
 

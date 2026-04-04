@@ -173,7 +173,7 @@ export default function Home() {
                 registered plan, handling the regulatory and transactional work that turns a site
                 into a project.
               </p>
-              <a href="#" className="card-link">
+              <a href="/real-estate-development" className="card-link">
                 Learn more <ArrowIcon />
               </a>
             </div>
