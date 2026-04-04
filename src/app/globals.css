@@ -385,12 +385,19 @@ nav.scrolled {
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 6vw, 6rem);
-  align-items: center;
+  gap: 0;
+  align-items: stretch;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 8rem clamp(1.5rem, 4vw, 4rem) 4rem;
+  padding: 0;
   width: 100%;
+}
+
+.hero-left {
+  padding: 8rem clamp(1.5rem, 4vw, 4rem) 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-left h1 {
@@ -417,6 +424,7 @@ nav.scrolled {
   position: relative;
   overflow: hidden;
   padding: 0;
+  min-height: 500px;
 }
 
 .hero-image {
@@ -1466,7 +1474,8 @@ footer {
 
 @media (max-width: 1024px) {
   .hero::before { display: none; }
-  .hero-content { grid-template-columns: 1fr; padding-top: 7rem; }
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-left { padding-top: 7rem; }
   .hero-right { display: none; }
   .philosophy-grid { grid-template-columns: 1fr; }
   .approach-items { grid-template-columns: 1fr; }
