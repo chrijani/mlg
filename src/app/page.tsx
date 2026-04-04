@@ -117,7 +117,7 @@ export default function Home() {
                 years to undo. We guide estate trustees from the Certificate of Appointment to the
                 final distribution.
               </p>
-              <a href="#" className="card-link">
+              <a href="/estate-administration" className="card-link">
                 Learn more <ArrowIcon />
               </a>
             </div>

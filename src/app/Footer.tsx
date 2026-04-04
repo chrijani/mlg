@@ -13,7 +13,7 @@ export default function Footer() {
             <h4>Services</h4>
             <ul>
               <li><a href="/estate-planning">Wills &amp; Estate Planning</a></li>
-              <li><a href="#">Estate Administration</a></li>
+              <li><a href="/estate-administration">Estate Administration</a></li>
               <li><a href="#">Mortgage Enforcement</a></li>
               <li><a href="#">Private Lending</a></li>
               <li><a href="#">Real Estate Transactions</a></li>
