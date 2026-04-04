@@ -410,8 +410,9 @@ nav.scrolled {
 }
 
 .hero-left .btn {
-  align-self: flex-start;
-  width: fit-content;
+  align-self: flex-start !important;
+  width: fit-content !important;
+  display: inline-block !important;
 }
 
 .hero-image-wrap {
