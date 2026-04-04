@@ -20,6 +20,16 @@ export default function Home() {
 
       {/* Hero */}
       <section className="hero" id="home">
+        <div className="hero-image-wrap">
+          <Image
+            src="/homepage_hero_image.png"
+            alt="Mariotti Law Group office"
+            fill
+            priority
+            className="hero-image"
+          />
+          <div className="hero-image-overlay" />
+        </div>
         <div className="hero-content">
           <div className="hero-left">
             <p className="text-sm-label text-gray fade-in">Est. 1965</p>
@@ -33,16 +43,6 @@ export default function Home() {
               counsel you need before you need it.
             </p>
             <a href="#contact" className="btn fade-in stagger-3">Schedule a Consultation</a>
-          </div>
-          <div className="hero-right hero-right-image">
-            <Image
-              src="/homepage_hero_image.png"
-              alt="Mariotti Law Group office"
-              fill
-              priority
-              className="hero-image fade-in stagger-4"
-            />
-            <div className="hero-image-overlay" />
           </div>
         </div>
       </section>
