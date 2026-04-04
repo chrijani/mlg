@@ -26,7 +26,7 @@ export default function Footer() {
             <ul>
               <li><a href="#">Team</a></li>
               <li><a href="#">Resources</a></li>
-              <li><a href="/#contact">Contact</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
           <div className="footer-col">

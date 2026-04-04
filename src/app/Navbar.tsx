@@ -84,7 +84,7 @@ export default function Navbar() {
             </div>
           </li>
           <li><a href="#">Resources</a></li>
-          <li><a href="/#contact" className="nav-cta">Contact</a></li>
+          <li><a href="/contact" className="nav-cta">Contact</a></li>
         </ul>
         <MobileNav services={services} />
       </div>

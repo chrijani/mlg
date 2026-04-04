@@ -52,7 +52,7 @@ export default function MobileNav({ services }: { services: Service[] }) {
           ))}
         </div>
         <a href="#" onClick={close}>Resources</a>
-        <a href="/#contact" onClick={close}>Contact</a>
+        <a href="/contact" onClick={close}>Contact</a>
       </div>
     </>
   );
