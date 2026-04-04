@@ -12,34 +12,50 @@ function ArrowIcon() {
   );
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  name: "Mariotti Law Group",
-  description: "Ontario law firm advising families, lenders, and businesses since 1965. Estate planning, mortgage enforcement, real estate, private lending, corporate transactions.",
-  url: "https://mariottilaw.ca",
-  telephone: "+1-519-997-3775",
-  faxNumber: "+1-226-620-1943",
-  email: "info@mariottilaw.ca",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "625 Erie Street East",
-    addressLocality: "Windsor",
-    addressRegion: "ON",
-    postalCode: "N9A 3Y1",
-    addressCountry: "CA",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Mariotti Law Group",
+    description: "Windsor Ontario law firm advising families, lenders, and businesses since 1965.",
+    url: "https://mariottilaw.ca",
+    telephone: "+1-519-997-3775",
+    faxNumber: "+1-226-620-1943",
+    email: "info@mariottilaw.ca",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "625 Erie Street East",
+      addressLocality: "Windsor",
+      addressRegion: "ON",
+      postalCode: "N9A 3Y1",
+      addressCountry: "CA",
+    },
+    geo: { "@type": "GeoCoordinates", latitude: 42.3149, longitude: -83.0364 },
+    foundingDate: "1965",
+    founder: { "@type": "Person", name: "Anthony Mariotti" },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+      { "@type": "City", name: "Windsor, Ontario" },
+      { "@type": "AdministrativeArea", name: "Essex County, Ontario" },
+    ],
+    knowsAbout: [
+      "Estate Planning", "Estate Administration", "Probate",
+      "Mortgage Enforcement", "Power of Sale",
+      "Private Lending", "Mortgage Investment Corporations",
+      "Real Estate Transactions", "Commercial Real Estate",
+      "Real Estate Development", "Corporate Law", "Commercial Law",
+      "Shareholder Agreements",
+    ],
+    sameAs: [],
   },
-  geo: { "@type": "GeoCoordinates", latitude: 42.3149, longitude: -83.0364 },
-  foundingDate: "1965",
-  founder: { "@type": "Person", name: "Anthony Mariotti" },
-  areaServed: { "@type": "AdministrativeArea", name: "Ontario, Canada" },
-  knowsAbout: [
-    "Estate Planning", "Estate Administration", "Mortgage Enforcement",
-    "Private Lending", "Real Estate Transactions", "Real Estate Development",
-    "Corporate Law", "Commercial Law",
-  ],
-  sameAs: [],
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+    ],
+  },
+];
 
 export default function Home() {
   return (

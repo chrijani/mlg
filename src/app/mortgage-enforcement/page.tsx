@@ -4,32 +4,62 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Mortgage Enforcement | Power of Sale, Receivership | Mariotti Law Group | Ontario",
+  title: "Mortgage Enforcement Lawyer Ontario | Mariotti Law Group",
   description:
-    "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. We act for private lenders, MICs, credit unions, and institutional lenders.",
+    "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. Private lenders, MICs, credit unions, institutional lenders.",
   alternates: { canonical: "https://mariottilaw.ca/mortgage-enforcement" },
   openGraph: {
-    title: "Mortgage Enforcement | Power of Sale, Receivership | Mariotti Law Group | Ontario",
+    title: "Mortgage Enforcement Lawyer Ontario | Mariotti Law Group",
     description:
-      "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. We act for private lenders, MICs, credit unions, and institutional lenders.",
+      "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. Private lenders, MICs, credit unions, institutional lenders.",
     url: "https://mariottilaw.ca/mortgage-enforcement",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mortgage Enforcement | Power of Sale, Receivership | Mariotti Law Group | Ontario",
+    title: "Mortgage Enforcement Lawyer Ontario | Mariotti Law Group",
     description:
-      "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. We act for private lenders, MICs, credit unions, and institutional lenders.",
-    images: ["https://mariottilaw.ca/og-image.jpg"],
+      "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. Private lenders, MICs, credit unions, institutional lenders.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Mariotti Law Group — Mortgage Enforcement",
+    description:
+      "Mortgage enforcement for Ontario lenders. Power of sale, receivership, judicial sale, personal judgment. Private lenders, MICs, credit unions, institutional lenders.",
+    url: "https://mariottilaw.ca/mortgage-enforcement",
+    provider: {
+      "@type": "LegalService",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+      { "@type": "City", name: "Windsor, Ontario" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://mariottilaw.ca/#practices" },
+      { "@type": "ListItem", position: 3, name: "Mortgage Enforcement", item: "https://mariottilaw.ca/mortgage-enforcement" },
+    ],
+  },
+];
 
 export default function MortgageEnforcementPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 
@@ -198,7 +228,7 @@ export default function MortgageEnforcementPage() {
             <div className="situation-card fade-in s4">
               <h3>A development has stalled and your construction loan is exposed.</h3>
               <p>
-                Developer receiverships in Ontario jumped 50% in 2024. Stalled projects bring lien priority disputes, holdback deficiencies, incomplete construction, and creditors competing for whatever is left. We handle the enforcement and, where it makes economic sense, work with receivers to complete the project rather than liquidate it at a loss.
+                Developer receiverships in Ontario jumped 50% in 2024. Stalled projects bring lien priority disputes, holdback deficiencies, incomplete construction, and creditors competing for whatever is left. We handle the enforcement and, where it makes economic sense, work with receivers to complete the project rather than liquidate it at a loss. See our <a href="/real-estate-development">real estate development</a> practice for the planning side.
               </p>
             </div>
             <div className="situation-card fade-in s5">

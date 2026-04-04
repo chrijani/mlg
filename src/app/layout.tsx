@@ -2,39 +2,38 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mariotti Law Group | Estate Planning, Mortgage Enforcement, Real Estate, Corporate Law | Ontario",
+  title: "Mariotti Law Group | Windsor Ontario Law Firm | Est. 1965",
   description:
-    "Mariotti Law Group has advised Ontario families, lenders, and businesses since 1965. Estate planning. Mortgage enforcement. Real estate. Private lending. Corporate transactions. Five lawyers. Seven practices.",
+    "Windsor Ontario law firm advising families, lenders, and businesses since 1965. Estate planning, mortgage enforcement, private lending, real estate, corporate.",
   keywords: [
-    "law firm",
-    "estate planning",
-    "wills",
-    "mortgage enforcement",
-    "private lending",
-    "commercial real estate",
-    "corporate law",
-    "Ontario lawyer",
-    "Windsor lawyer",
+    "Windsor Ontario law firm",
+    "estate planning lawyer Ontario",
+    "mortgage enforcement lawyer Ontario",
+    "private lending lawyer Ontario",
+    "real estate lawyer Windsor Ontario",
+    "business lawyer Windsor Ontario",
+    "probate lawyer Ontario",
     "Mariotti Law Group",
   ],
   authors: [{ name: "Mariotti Law Group" }],
   robots: "index, follow",
+  alternates: { canonical: "https://mariottilaw.ca" },
   openGraph: {
-    title: "Mariotti Law Group | Estate Planning, Mortgage Enforcement, Real Estate, Corporate Law | Ontario",
+    title: "Mariotti Law Group | Windsor Ontario Law Firm | Est. 1965",
     description:
-      "Mariotti Law Group has advised Ontario families, lenders, and businesses since 1965. Estate planning. Mortgage enforcement. Real estate. Private lending. Corporate transactions.",
+      "Windsor Ontario law firm advising families, lenders, and businesses since 1965. Estate planning, mortgage enforcement, private lending, real estate, corporate.",
     url: "https://mariottilaw.ca",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mariotti Law Group | Estate Planning, Mortgage Enforcement, Real Estate, Corporate Law | Ontario",
+    title: "Mariotti Law Group | Windsor Ontario Law Firm | Est. 1965",
     description:
-      "Mariotti Law Group has advised Ontario families, lenders, and businesses since 1965. Five lawyers. Seven practices.",
-    images: ["https://mariottilaw.ca/og-image.jpg"],
+      "Windsor Ontario law firm advising families, lenders, and businesses since 1965. Estate planning, mortgage enforcement, private lending, real estate, corporate.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
   other: {
     "geo.region": "CA-ON",

@@ -5,22 +5,42 @@ import ScrollAnimations from "../ScrollAnimations";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — Mariotti Law Group",
+  title: "Contact | Mariotti Law Group | Windsor Ontario",
   description:
-    "Schedule a consultation with Mariotti Law Group. Estate planning, corporate law, real estate, mortgage enforcement, and private lending across Ontario.",
+    "Contact Mariotti Law Group at 625 Erie Street East, Windsor Ontario. Call 519-997-3775 or email info@mariottilaw.ca to schedule a consultation.",
+  alternates: { canonical: "https://mariottilaw.ca/contact" },
   openGraph: {
-    title: "Contact — Mariotti Law Group",
+    title: "Contact | Mariotti Law Group | Windsor Ontario",
     description:
-      "A conversation is the place to start. Tell us what you are facing, and we will tell you how we can help.",
+      "Contact Mariotti Law Group at 625 Erie Street East, Windsor Ontario. Call 519-997-3775 or email info@mariottilaw.ca to schedule a consultation.",
     url: "https://mariottilaw.ca/contact",
     siteName: "Mariotti Law Group",
     type: "website",
+    locale: "en_CA",
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Mariotti Law Group | Windsor Ontario",
+    description:
+      "Contact Mariotti Law Group at 625 Erie Street East, Windsor Ontario. Call 519-997-3775 or email info@mariottilaw.ca.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://mariottilaw.ca/contact" },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 

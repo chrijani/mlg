@@ -4,32 +4,62 @@ import Footer from "../Footer";
 import ScrollAnimations from "../ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Wills & Estate Planning | Mariotti Law Group | Ontario",
+  title: "Estate Planning Lawyer Ontario | Mariotti Law Group",
   description:
-    "Wills, powers of attorney, trusts, and estate plans for Ontario families. Blended families, business owners, Henson trusts, multiple wills strategies. Founded 1965.",
+    "Ontario estate planning lawyers. Wills, powers of attorney, trusts, Henson trusts, multiple wills strategies. Blended families, business owners, cottage properties.",
   alternates: { canonical: "https://mariottilaw.ca/estate-planning" },
   openGraph: {
-    title: "Wills & Estate Planning | Mariotti Law Group | Ontario",
+    title: "Estate Planning Lawyer Ontario | Mariotti Law Group",
     description:
-      "Wills, powers of attorney, trusts, and estate plans for Ontario families. Blended families, business owners, Henson trusts, multiple wills strategies. Founded 1965.",
+      "Ontario estate planning lawyers. Wills, powers of attorney, trusts, Henson trusts, multiple wills strategies. Blended families, business owners, cottage properties.",
     url: "https://mariottilaw.ca/estate-planning",
     siteName: "Mariotti Law Group",
     type: "website",
     locale: "en_CA",
-    images: [{ url: "https://mariottilaw.ca/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mariottilaw.ca/assets/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wills & Estate Planning | Mariotti Law Group | Ontario",
+    title: "Estate Planning Lawyer Ontario | Mariotti Law Group",
     description:
-      "Wills, powers of attorney, trusts, and estate plans for Ontario families. Blended families, business owners, Henson trusts, multiple wills strategies. Founded 1965.",
-    images: ["https://mariottilaw.ca/og-image.jpg"],
+      "Ontario estate planning lawyers. Wills, powers of attorney, trusts, Henson trusts, multiple wills strategies. Blended families, business owners, cottage properties.",
+    images: ["https://mariottilaw.ca/assets/images/og-image.jpg"],
   },
 };
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Mariotti Law Group — Wills & Estate Planning",
+    description:
+      "Ontario estate planning lawyers. Wills, powers of attorney, trusts, Henson trusts, multiple wills strategies. Blended families, business owners, cottage properties.",
+    url: "https://mariottilaw.ca/estate-planning",
+    provider: {
+      "@type": "LegalService",
+      name: "Mariotti Law Group",
+      url: "https://mariottilaw.ca",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Ontario, Canada" },
+      { "@type": "City", name: "Windsor, Ontario" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mariottilaw.ca/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://mariottilaw.ca/#practices" },
+      { "@type": "ListItem", position: 3, name: "Wills & Estate Planning", item: "https://mariottilaw.ca/estate-planning" },
+    ],
+  },
+];
 
 export default function EstatePlanningPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ScrollAnimations />
       <Navbar />
 
@@ -109,7 +139,7 @@ export default function EstatePlanningPage() {
                 For complex ones, we go further.
               </p>
               <p>
-                Complex means business ownership where the estate plan and the shareholder agreement
+                Complex means business ownership where the estate plan and the <a href="/corporate-commercial">shareholder agreement</a>
                 need to say the same thing. Blended families where children from a prior relationship
                 need protection alongside a current spouse. Registered accounts where a $500,000 RRSP
                 without a spousal rollover generates roughly $268,000 in tax at death. Cottages that
